@@ -1,3 +1,5 @@
 **/archive
 **.~lock.**
 **.conda/
+**/hcn
+**.whl

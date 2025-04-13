@@ -58,6 +58,77 @@ Objetivos:
 
 ## 🧱 AutoML en Vertex AI
 
+### 📝 Notas
+
+- **Lanzar el shell de Google**: Primero, se debe autorizar y obtener la shell.
+
+  ![alt text](image.png)
+
+  ![alt text](image-1.png)
+
+- **Creación de un bucket**: Los buckets son carpetas de almacenamiento para guardar datos usados en el entrenamiento.
+
+  ```bash
+  gcloud config list project
+  export PROJECT_ID=$DEVSHELL_PROJECT_ID
+  export BUCKET=$PROJECT_ID
+  gsutil mb -p $PROJECT_ID -c standard -l "EU" gs://${BUCKET}
+  ```
+
+  ![alt text](image-2.png)
+
+- **Copiar ficheros públicos de Google Cloud**:
+
+  ![alt text](image-3.png)
+
+- **Verificar el bucket creado**:
+
+  ![alt text](image-4.png)
+
+- **Subida manual de archivos**:
+
+  ![alt text](image-5.png)
+
+  Los archivos se almacenan como 'Standard', ideales para datos con acceso frecuente y baja latencia, como imágenes de una web.
+
+- **Almacenamiento de datos en un CSV**:
+
+  ![alt text](image-6.png)
+
+  Se sustituye el bucket original por el nuestro:
+
+  ![alt text](image-7.png)
+
+- **Creación de datasets**: En el apartado de datasets, se crea uno orientado a clasificación uniclase. El dataset debe estar en la misma región que el bucket.
+
+  ![alt text](image-8.png)
+
+  ![alt text](image-9.png)
+
+  ![alt text](image-10.png)
+
+- **Entrenamiento del modelo**: Una vez importado y comprobado, se selecciona "train new model".
+
+  ![alt text](image-11.png)
+
+  Es posible entrenar un modelo o varias versiones del mismo, dentro del concepto de MLOps.
+
+  ![alt text](image-12.png)
+
+- **Entrenamiento incremental**: Permite entrenar solo con nuevos datos, sin mezclar con los anteriores, para perfeccionar el modelo.
+
+  ![alt text](image-13.png)
+
+- **Asignación de presupuesto**: Se define en términos de horas de computación (máximo).
+
+  ![alt text](image-14.png)
+
+  ![alt text](image-15.png)
+
+- **Predicciones**: Una vez entrenado el modelo, se realizan predicciones con Proxy-AutoML. Este recurso proporciona información analítica de las predicciones realizadas.
+
+  ![alt text](image-16.png)
+
 ### 🎓 Definición:
 AutoML automatiza todas las etapas del modelado: limpieza, ingeniería de variables, selección de algoritmos, entrenamiento, evaluación y despliegue.
 
@@ -83,6 +154,8 @@ AutoML automatiza todas las etapas del modelado: limpieza, ingeniería de variab
 ---
 
 ## 🏛 BigQuery ML
+
+min 46
 
 ### ✏️ Creación de modelos con SQL:
 - Modelos: regresión, clasificación, ARIMA, XGBoost, k-means, PCA...
