@@ -2,7 +2,7 @@
 
 ---
 
-## 🔍 Introducción y Objetivos
+## Introducción y Objetivos
 
 Este tema profundiza en las funcionalidades de **Azure Machine Learning**, la plataforma de Microsoft para crear y gestionar modelos de IA. Se abordan todas las fases del ciclo de vida de un modelo: ingestón y exploración de datos, ingeniería de variables, entrenamiento, ajuste de hiperparámetros, despliegue, monitorización y operación.
 
@@ -13,7 +13,7 @@ Los objetivos incluyen:
 
 ---
 
-## 📂 Entorno de Trabajo (Workspace)
+## Entorno de Trabajo (Workspace)
 
 Se puede crear mediante:
 - Azure CLI (`az ml workspace create`)
@@ -34,7 +34,7 @@ Al crear el entorno, también se generan:
 
 ---
 
-## 📊 Ingestión y Exploración de Datos, Ingeniería de Variables y Pipelines
+## Ingestión y Exploración de Datos, Ingeniería de Variables y Pipelines
 
 ### Ingestión de Datos
 Se gestionan con `dataset` y `datastore`.
@@ -68,7 +68,7 @@ experiment.submit(pipeline)
 
 ---
 
-## 👨‍💻 Entrenamiento de Modelos y Redes Neuronales
+## Entrenamiento de Modelos y Redes Neuronales
 
 ### Modelos Clásicos
 Usa Jupyter Notebooks. Registro de dataset, ejecuciones, métricas y modelos. Ejemplo con LGBM:
@@ -85,7 +85,7 @@ AmlCompute.provisioning_configuration(vm_size='STANDARD_NC6')
 
 ---
 
-## ⚖️ Ajuste de Hiperparámetros con HyperDrive
+## Ajuste de Hiperparámetros con HyperDrive
 
 ### Estrategias:
 - Grid Search
@@ -105,7 +105,7 @@ experiment.submit(config)
 
 ---
 
-## 🤖 AutoML (Machine Learning Automatizado)
+## AutoML (Machine Learning Automatizado)
 
 AutoML permite entrenar modelos sin escribir código complejo. Se puede usar por GUI o Python.
 
@@ -117,7 +117,7 @@ experiment.submit(config)
 
 ---
 
-## 🧪 Deep Learning Distribuido con Horovod
+## Deep Learning Distribuido con Horovod
 
 Permite paralelismo de datos con varios nodos:
 ```python
@@ -133,7 +133,7 @@ MpiConfiguration(process_count_per_node=1, node_count=2)
 
 ---
 
-## 🚀 Despliegue y Operación de Modelos
+## Despliegue y Operación de Modelos
 
 ### Autodespliegue:
 ```python
@@ -148,7 +148,7 @@ service = Model.deploy(ws, 'servicio1', [model])
 
 ---
 
-## 📒 Cuaderno de Ejercicios (Resumen)
+## Cuaderno de Ejercicios (Resumen)
 - Crear dataset desde CSV
 - Crear infraestructura con `AmlCompute`
 - Configurar y lanzar AutoML con `AutoMLConfig`
@@ -157,7 +157,7 @@ service = Model.deploy(ws, 'servicio1', [model])
 
 ---
 
-## 🔗 Recursos y Referencias
+## Recursos y Referencias
 - Microsoft Learn
 - Medium
 - Documentación oficial de Azure ML
