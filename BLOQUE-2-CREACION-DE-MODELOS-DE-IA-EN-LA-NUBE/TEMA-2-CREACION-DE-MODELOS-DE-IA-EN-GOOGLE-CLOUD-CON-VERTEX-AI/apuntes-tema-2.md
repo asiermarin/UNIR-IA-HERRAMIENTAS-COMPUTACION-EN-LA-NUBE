@@ -226,7 +226,7 @@ Resultado de inferencia:
 
 ---
 
-## Referencias y enlaces
+## Referencias y enlaces 
 - Google Cloud Docs (AutoML, BigQuery ML, Workbench)
 - O'Reilly: *Hands-On Machine Learning on GCP*
 - Medium: Artículos técnicos sobre Vertex AI
@@ -234,4 +234,4 @@ Resultado de inferencia:
 
 ---
 
-Este resumen cubre todo el contenido del Tema 2 en profundidad. Si deseas que lo convierta en una presentación, mapa mental o ejemplos con código real... ¡te lo armo encantado!
+https://www.cloudskillsboost.google/focuses/3391?parent=catalog
